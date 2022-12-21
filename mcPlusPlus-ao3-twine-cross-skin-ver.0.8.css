@@ -1,0 +1,511 @@
+/*
+All font sizes are commented out for ao3,
+they are needed for twine
+*/
+/* import fonts in twine
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
+
+@font-face {
+    font-family: p5hatty;
+    src: url(_images/Fonts/p5hatty.ttf);
+}
+*/
+
+/* hides chapter titles on ao3
+#workskin .chapter.preface.group .title {
+  visibility: hidden;
+  line-height: 0;
+}
+*/
+
+#story {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  line-height: 1;
+  /*font-size: 100%;*/
+}
+
+code {
+  font-family: Courier New, sans-serif;
+  /*font-size: 100%;*/
+}
+
+b {
+  font-family: inherit;
+}
+
+h5 {
+  margin: 0 0 0 0;
+}
+
+.ttl {
+  text-align: center;
+  font-family: Arsenal, Verdana, sans-serif;
+  /*font-size: 2em*/
+}
+
+.nav {
+  text-align: center;
+  font-family: inherit;
+  margin: 32px 0 0 0;
+  /*font-size: 110%;*/
+}
+
+div#passages {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: p5hatty, Arsenal, Verdana, sans-serif;
+}
+
+.grd {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  height: 15vh;
+  min-height: 128px;
+  width: 50vw;
+  max-width: 720px;
+  margin: 6vh 0 6vh 0;
+  font-family: inherit;
+}
+
+/* would be the text box behind the character name and text like persona but idk how to make it work
+.txb {
+  background-image: URL("https://i.imgur.com/WXXtawe.png");
+  width: 628px;
+  height: 180px;
+}
+*/
+
+.tex {
+  grid-column: 2;
+  height: 20vh;
+  width: 50vw;
+  max-width: 540px;
+  max-height: 256 px;
+  margin: 0px 1vw 0px 1vw;
+  overflow: auto;
+  text-align: justify;
+  font-family: inherit;
+}
+
+.exp {
+  text-align: center;
+  font-style: italic;
+  padding: 2em 0px 0px 0px;
+}
+
+.cut {
+  display: grid;
+  height: 256px;
+}
+
+.dgrd {
+  position: relative;
+  text-align: left;
+  min-height: 250px;
+  max-width: 720px;
+  background: URL(https://i.imgur.com/1nPYR0d.png), URL(https://i.imgur.com/Ew1K4GT.png);
+  background-size: contain, contain;
+  background-position: right, left;
+  background-repeat: no-repeat;
+  margin: 6em 0px 0px 0px;
+}
+
+.dc1 {
+  text-align: center;
+  position: absolute;
+  transform: rotate(11deg);
+  bottom: 65%;
+  left: 17%;
+  height: 50px;
+  width: 50vw;
+  max-width: 225px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.dc2 {
+  text-align: center;
+  position: absolute;
+  transform: rotate(1deg);
+  bottom: 47%;
+  left: 10%;
+  height: 50px;
+  width: 50vw;
+  max-width: 225px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.dc3 {
+  text-align: center;
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+  transform: rotate(-12deg);
+  height: 50px;
+  width: 50vw;
+  max-width: 225px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+[class^="im-"] {
+  grid-column: 1;
+  height: 20vh;
+  max-height: 512px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+[class^="i-"] {
+  grid-column: 1;
+  width: 20vw;
+  height: 20vh;
+  min-width: 128px;
+  max-width: 512px;
+  min-height: 128px;
+  max-height: 512px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+[class^="c-"] {
+  background-size: 125%;
+  background-position: center 50%;
+  background-repeat: no-repeat;
+}
+
+[class^="i-ann"] {
+  transform: translate(0,-32px);
+}
+
+.i-chr-emo {
+  background-image: URL(https://i.imgur.com/S2dgciS.png);
+}
+
+.c-chr-emo {
+  background-image: URL(https://i.imgur.com/tsRTSz3.png);
+}
+
+.im-ren {
+  background-image: URL(https://i.imgur.com/MXrqHXz.png);
+}
+
+.im-ann {
+  background-image: URL(https://64.media.tumblr.com/63ac5c783222fb6a6af9911334a807d3/tumblr_ostusm8BJf1snj2byo2_250.png);
+}
+
+.im-shi {
+  background-image: URL(https://i.imgur.com/IgKA0VI.png);
+}
+
+.im-ryu {
+  background-image: URL(https://64.media.tumblr.com/b99ba23e1abe3614af9755236289b8c9/tumblr_ostusm8BJf1snj2byo6_250.png);
+}
+
+.im-mak {
+  background-image: URL(https://64.media.tumblr.com/72e644e20dc2adc4fa31d204bc3a3c06/tumblr_ostusm8BJf1snj2byo5_250.png);
+}
+
+.im-fut {
+  background-image: URL(https://64.media.tumblr.com/10d3418aa31dcdc6ea52efcd85bd3f65/tumblr_ostusm8BJf1snj2byo3_250.png);
+}
+
+.im-yus {
+  background-image: URL(https://64.media.tumblr.com/87f19e0c35e714f4f82eee5a802087d7/tumblr_ostusm8BJf1snj2byo7_250.png);
+}
+
+.im-hru {
+  background-image: URL(https://64.media.tumblr.com/0251015bd288d9fdebe3319843d431cd/tumblr_ostusm8BJf1snj2byo4_250.png);
+}
+
+.i-ren-nor {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/5/58/P5OA_Protagonist_Normal.png);
+}
+
+.i-ren-hap {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/0/06/P5OA_Protagonist_Happy.png);
+}
+
+.i-ren-sad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/1/13/P5OA_Protagonist_Sad.png);
+}
+
+.i-ren-mad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/e/e3/P5OA_Protagonist_Angry.png);
+}
+
+.i-ren-hrt {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/6/64/P5OA_Protagonist_Troubled.png);
+}
+
+.i-ren-sur {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/4/49/P5OA_Protagonist_Surprised.png);
+}
+
+.i-ann-nor {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/b/bd/P5R_Portrait_Ann.png);
+}
+
+.i-ann-hap {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/e/e3/P5R_Portrait_Ann_Smiling.png);
+}
+
+.i-ann-mad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/b/b0/P5R_Portrait_Ann_Scowling.png);
+}
+
+.i-ann-sad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/b/bd/P5R_Portrait_Ann_Sad.png);
+}
+
+.i-ann-sur {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/b/b1/P5R_Portrait_Ann_Surprised.png);
+}
+
+.i-ann-hrt {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/c/cf/P5R_Portrait_Ann_Harmed.png);
+}
+
+.i-ann-blu {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/1/11/P5R_Portrait_Ann_Blushing.png);
+}
+
+.i-ann-emb {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/f/f9/P5R_Portrait_Ann_Embarrassed.png);
+}
+
+.i-ann-scr {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/d/d5/P5R_Portrait_Ann_Crying.png);
+}
+
+.i-ann-hcr {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/4/47/P5R_Portrait_Ann_Smiling_While_Crying.png);
+}
+
+.i-shi-nor {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/d/da/Shiho_portrait.png);
+}
+
+.i-shi-hap {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/5/5d/P5_portrait_of_Shiho_smiling.png);
+}
+
+.i-shi-sad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/7/70/P5_portrait_of_Shiho_sad.png);
+}
+
+.i-shi-sur {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/e/e0/P5_portrait_of_Shiho_surprised.png);
+}
+
+.i-shi-hrt {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/5/5e/P5_portrait_of_Shiho_hurt.png);
+}
+
+.i-shi-hrm {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/1/1e/P5_portrait_of_Shiho_harmed.png);
+}
+
+.i-shi-inr {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/9/91/P5_portrait_of_Shiho_injured.png);
+}
+
+.i-shi-ihm {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/1/1d/P5_portrait_of_Shiho_injured_harmed.png);
+}
+
+.i-shi-iht {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/b/be/P5_portrait_of_Shiho_injured_hurt.png);
+}
+
+.i-mak-nor {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/7/79/P5_portrait_of_Makoto_Nijima.png);
+}
+
+.i-mak-hap {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/9/98/P5_Portrait_of_Makoto_Smiling.png);
+}
+
+.i-mak-mad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/7/7b/P5_portrait_of_Makoto_Angry.png);
+}
+
+.i-mak-sad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/a/af/P5_Portrait_of_Makoto_Frowning.png);
+}
+
+.i-mak-sur {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/1/1f/P5_Portrait_of_Makoto_Surprised.png);
+}
+
+.i-mak-hrt {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/3/32/P5_Portrait_of_Makoto_Harmed.png);
+}
+
+.i-mak-blu {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/e/e6/P5_Portrait_of_Makoto_blushing.png);
+}
+
+.i-mak-flu {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/8/8d/P5R_Portrait_Makoto_Flushed.png);
+}
+
+.i-sae-nor {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/2/26/Sae.png);
+}
+
+.i-sae-hap {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/f/ff/Sae_happy.png);
+}
+
+.i-sae-mad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/e/e1/Sae_annoyed.png);
+}
+
+.i-sae-sad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/3/3b/Sae_sad.png);
+}
+
+.i-sae-sur {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/3/34/Sae_surprised.png);
+}
+
+.i-sae-hrt {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/4/40/Sae_hurt.png);
+}
+
+.i-tae-nor {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/4/44/P5_portrait_of_Tae_Takemi.png);
+}
+
+.i-tae-hap {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/4/44/P5_portrait_of_Takemi_smiling.png);
+}
+
+.i-tae-mad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/8/8f/P5_portrait_of_Takemi_scowling.png);
+}
+
+.i-tae-sad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/9/9c/P5_portrait_of_Takemi_sad.png);
+}
+
+.i-tae-blu {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/1/1a/P5_portrait_of_Takemi_blushing.png);
+}
+
+.i-tae-flu {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/f/fd/P5_portrait_of_Takemi_flushed.png);
+}
+
+.i-tae-sur {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/9/97/P5_portrait_of_Takemi_surprised.png);
+}
+
+.c-ren-fcs {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/1/1f/P5R_Joker_cut-in_minigames.png);
+}
+
+.c-ren-smk {
+  background-image: URL(https://i.imgur.com/iok4Ti8.png);
+}
+
+.c-ren-dep {
+  background-image: URL(https://i.imgur.com/Tqr7vtb.png);
+}
+
+.c-ann-nor {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/d/d8/Ann_Normal_Cut-In.png);
+}
+
+.c-ann-sad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/a/a9/Ann_Sad_Cut-in.png);
+}
+
+.c-ann-mad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/2/22/Ann_Angry_Cut-in.png);
+}
+
+.c-ann-wnk {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/b/b7/Ann_Wink_Cut-in.png);
+}
+
+.c-ann-cnf {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/e/e9/Ann_Confused_Cut-In.png);
+}
+
+.c-ann-any {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/5/51/Ann_Serious_Cut-in.png);
+}
+
+.c-ann-hrt {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/6/6e/Ann_Harmed_Cut-in.png);
+}
+
+.c-ann-sur {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/7/7c/Ann_Suprised_Cut-In.png);
+}
+
+.c-mak-hap {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/0/0b/Makoto_Happy_Cut-in.png);
+}
+
+.c-mak-wnk {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/1/10/Makoto_Winking_Cut-in.png);
+}
+
+.c-mak-sad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/d/d7/Makoto_Sad_Cut-in.png);
+}
+
+.c-mak-md1 {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/9/91/Makoto_Angry_Cut-in.png);
+}
+
+.c-mak-md2 {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/1/10/Makoto_Angry_Cut-in_2.png);
+}
+
+.c-mak-hrt {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/8/8d/Makoto_Harmed_Cut-in.png);
+}
+
+.c-sae-hap {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/9/9f/Sae_Happy_Cut-in.png);
+}
+
+.c-sae-md1 {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/8/86/Sae_Serious_Cut-in.png);
+}
+
+.c-sae-md2 {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/7/75/Sae_Serious_Cut-in_2.png);
+}
+
+.c-sae-sad {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/9/94/Sae_Sad_Cut-in.png);
+}
+
+.c-sae-sur {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/c/c6/Sae_Surprised_Cut-in.png);
+}
+
+.c-sae-hrt {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/b/be/Sae_Harmed_Cut-in.png);
+}
+
+.c-tae-wnk {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/a/ad/Tae_Winking_Cut-in.png);
+}
+
+.c-tae-sur {
+  background-image: URL(https://static.wikia.nocookie.net/megamitensei/images/2/2a/Tae_Surprised_Cut-in.png);
+}
