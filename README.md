@@ -11,7 +11,7 @@ this is where all my interactive fics will live eventually (I'll edit my posts t
 
 fine fine okay okay. here are the links to the fics
 
-### max confidant plus plus
+### [max confidant plus plus](https://cacman.itch.io/mcplusplus)
 
 ### other stuff
 - [What if?](https://v6p9d9t4.ssl.hwcdn.net/html/6682977/index.html){:target="_blank" rel="noopener"}  
